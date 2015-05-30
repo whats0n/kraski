@@ -1,0 +1,653 @@
+.out
+	min-width: 320px
+	background: url(../img/bg.jpg) no-repeat bottom center 
+	+cover
+	+r1
+		background: none
+.inner
+	max-width: 940px
+	padding: 0 40px 
+	margin: 0 auto
+	+clr
+	+r1
+		padding: 0 15px 
+.header
+	background: #eff2f4
+	padding: 10px 0 
+	&__info
+		float: left
+		font-size: 0
+		+r3
+			float: none
+		div
+			display: inline-block
+			vertical-align: middle
+			margin-right: 40px
+			padding: 4px 0 5px 
+			+r2
+				margin-right: 20px
+			+r3
+				margin: 0 0 10px
+				width: 33.3%
+			+r4
+				width: 50%
+			+r5
+				width: 100%
+			&.is-schedule
+				i
+					+s(schedule)
+			&.is-phone
+				i
+					+s(phone)
+			&.is-mail
+				i
+					+s(mail)
+			i
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+	span
+		display: inline-block
+		vertical-align: middle
+		+reg
+		font-size: 14px
+		line-height: 1		
+.search
+	overflow: hidden
+	text-align: right
+	font-size: 0
+	padding: 0 60px 0 0
+	position: relative 
+	+r3
+		overflow: visible
+		clear: both
+		max-width: 320px 
+	&__btn
+		position: relative
+		padding: 7px 20px 6px 23px
+		background: #c5117c  
+		+border-radius(0 4px 4px 0)
+		position: absolute
+		top: 0
+		right: 0
+		&:before
+			+s(search)
+			content: ""
+			display: block
+		&:hover
+			background: lighten(#c5117c, 10%)
+		&:active
+			background: darken(#c5117c, 10%) 
+	.input
+		+border-radius(4px 0 0 4px)
+		border-right: none
+
+.main
+	padding: 20px 0 0
+	.inner
+		padding-bottom: 20px
+		&.bg
+			background: #fff 
+.top
+	+g(#323232, #000)
+	+border-radius(8px)
+	+clr
+	font-size: 0
+	position: relative
+	&.is-active
+		+border-radius(8px 8px 8px 0)
+	&__menu
+		overflow: hidden
+		+r2
+			overflow: visible
+	.nav
+		float: left
+		+r2
+			float: none
+.logo
+	float: left
+	width: 74px
+	margin: 14px 10px 16px 17px
+	font-size: 0
+	img
+		max-width: 100%
+
+.btn-nav
+	width: 33px
+	height: 25px
+	border-top: 3px solid #fff
+	border-bottom: 3px solid #fff
+	background: none
+	display: none
+	margin: 35px 5px
+	float: left 
+	+r3
+		display: block
+	&:before
+		content: "" 
+		height: 3px
+		display: block
+		background: #fff 
+.nav
+	padding: 36px 0 36px 
+	+r2
+		text-align: center
+	+r3
+		position: absolute
+		top: 100%
+		left: 0
+		background: #000 
+		z-index: 300 
+		+border-radius(0 0 8px 8px)
+		padding: 10px 0 
+		display: none
+		&.is-active
+			display: block
+	li
+		display: inline-block
+		vertical-align: top
+		position: relative
+		padding: 6px 10px 5px 25px 
+		+r2
+			padding: 6px 10px 5px 10px
+			border-left: 1px solid rgba(120, 144, 156, 0.37)
+		+r3
+			border: none
+			display: block
+			text-align: left
+			padding: 6px 19px 5px 19px 
+			border-top: 1px solid rgba(120, 144, 156, 0.37)
+		&:before
+			content: "" 
+			position: absolute
+			top: 50%
+			left: 0
+			+svg(stick, 16, 27)
+			margin-top: -14px
+			+r2
+				display: none
+		&:first-child
+			+r2
+				border: none
+			+r3
+				border: none
+			&:before
+				display: none
+	a
+		font-size: 13px
+		color: #fff
+		+bold
+		text-transform: uppercase 
+		+r2
+			font-size: 12px
+		&:hover
+			text-decoration: underline
+.basket
+	color: #fff
+	background-color: #242424
+	padding: 22px 0 21px 80px
+	float: right
+	+box
+	height: 99px
+	width: 190px
+	position: relative
+	+border-radius(0 8px 8px 0)
+	+r2
+		padding: 22px 0 21px 45px
+		width: 140px 
+	&:before, &:after
+		content: "" 
+		position: absolute
+		top: 50%
+	&:before
+		+svg(basket, 22, 20)
+		left: 22px
+		margin-top: -12px
+		+r2
+			left: 10px
+	&:after
+		+svg(stick, 16, 27)
+		left: 53px
+		margin-top: -14px
+		+r2
+			display: none
+	span
+		display: block
+	&__title
+		font-size: 13px
+		text-transform: uppercase
+	&__info
+		font-size: 12px
+		line-height: 20px
+		
+.menu
+	text-align: center
+	font-size: 0
+	padding: 17px 0 18px
+	+r3
+		padding-bottom: 13px
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 30px 
+		+r2
+			padding: 0 15px
+		+r3
+			display: block
+			margin-bottom: 5px
+	a
+		+exbold
+		font-size: 14px
+		line-height: 20px
+		color: #333 
+		text-transform: uppercase
+		&:hover
+			text-decoration: underline
+
+.slider
+	width: 100%
+	padding-bottom: 40px
+	position: relative
+	+clr
+	&__pager
+		text-align: center
+		padding: 12px  
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		span
+			width: 10px
+			height: 10px
+			background-color: #F1F3F5
+			border: 1px solid #DCDFE2
+			+border-radius(50%)	
+			position: relative
+			margin: 2px 7px 
+			display: inline-block
+			vertical-align: top
+			+box
+			font-size: 0
+			+transition(all 0.3s)
+			cursor: pointer
+			&:before
+				position: absolute
+				top: -3px
+				left: -3px
+				bottom: -3px
+				right: -3px
+				background: #C5117C
+				+border-radius(50%)	
+				content: "" 
+				+opacity(0)
+				visibility: hidden
+				+scale(0.7)
+				+transition(all 0.3s)
+			&.cycle-pager-active
+				&:before
+					+opacity(1)
+					visibility: visible
+					+scale(1)
+.slide
+	border: 1px solid rgba(236, 239, 241, 0.75)
+	width: 100%
+	a
+		display: block
+		position: relative
+		+clr
+	&__img
+		padding: 62px 73px 39px 60px 
+		float: left
+		+r3
+			padding: 20px 
+		+r4
+			float: none
+			text-align: center
+		img
+			width: 187px
+	&__info
+		overflow: hidden
+		padding: 56px 10px 56px 0 
+		+r3
+			padding: 20px 15px 70px  
+			text-align: center
+		&:before
+			display: block
+			width: 38px
+			height: 3px
+			background: #c5117c
+			content: ""  
+			margin-bottom: 23px
+			+r4
+				margin: 0 auto 20px
+		h3
+			text-transform: uppercase
+			max-width: 440px  
+			margin-bottom: 20px
+			+r4
+				margin: 0 auto 20px
+		p
+			+light
+			font-size: 13px
+			line-height: 20px
+			color: #455a64
+			max-width: 370px 
+			+r4
+				margin: 0 auto
+	&__price
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 337px
+		height: 107px
+		+r3
+			background: #C5117C
+			height: auto
+			width: auto
+			padding: 10px   
+		&:before
+			position: absolute
+			bottom: 0
+			right: 0
+			+arr(337, 107, #C5117C, br)
+			content: "" 
+			+r3
+				display: none
+		p			
+			color: #fff
+			font-size: 14px
+			text-align: right
+			position: absolute
+			bottom: 14px
+			right: 20px
+			+r3
+				position: static
+			span
+				font-size: 24px
+				+semi
+
+.partners
+	font-size: 0
+	text-align: center
+	padding: 6px 0 12px 
+	li
+		display: inline-block
+		vertical-align: middle
+		padding: 6px 37px 
+		+r2
+			padding: 6px 20px 
+.category
+	+clr
+	margin: 0 -10px 
+	&__list
+		width: 50%
+		float: left
+		+r3
+			width: 100%
+			text-align: center
+		li
+			padding: 10px
+			+r3
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				max-width: 460px
+				+box
+	&__link
+		display: block
+		position: relative
+		height: 65px
+		padding: 13px 13px 12px 91px
+		+vertical
+		background-color: #F1F3F5
+		+border-radius(12px)
+		&.is-active, &:hover
+			.category__number
+				+g(#DF158D, #A20A64)
+	&__number
+		width: 65px
+		line-height: 65px
+		+g(#424242, #000)
+		+border-radius(6px)
+		text-align: center
+		+semi
+		font-size: 16px
+		color: #fff
+		text-transform: uppercase
+		position: absolute
+		top: 13px
+		left: 13px
+	&__text
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		+semi
+		font-size: 18px
+		text-transform: uppercase
+		color: #333 
+.bottom
+	background-color: #EFF2F4
+	padding: 15px 0
+	p
+		color: #455A64
+		font-size: 13px
+		line-height: 20px
+	&__text
+		float: left
+		width: 100%
+		max-width: 480px
+		padding: 10px 0 
+		+r1
+			float: none
+			max-width: 100%
+		h4, p
+			max-width: 450px
+			+r1
+				max-width: 100%
+		h4
+			margin-bottom: 1px
+.social
+	max-width: 240px
+	width: 100%
+	float: left
+	+r1
+		float: none
+		max-width: 100%
+		text-align: center
+		font-size: 0
+	li
+		padding: 10px 0
+		+r1
+			display: inline-block
+			vertical-align: top
+			padding: 10px 7px
+		+r5
+			width: 100%
+			max-width: 220px
+			text-align: left
+			+box
+			padding: 5px 
+	a
+		display: inline-block
+		padding: 0 0 0 40px
+		position: relative
+		+semi
+		font-size: 16px
+		color: #333
+		line-height: 30px 
+		text-align: left
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+		&.is-u2b
+			&:before
+				+s(u2b)
+		&.is-vk
+			&:before
+				+s(vk)
+		&.is-fb
+			&:before
+				+s(fb)
+.links-info
+	width: 220px
+	float: right
+	+r1
+		float: none
+		width: 100%
+		text-align: center
+		font-size: 0
+	li
+		padding: 5px 0 
+		max-width: 230px
+		+r1
+			display: inline-block
+			vertical-align: top
+			padding: 5px 
+			width: 33.3%
+			max-width: 220px  
+			+box
+		+r4
+			width: 50%
+		+r5
+			width: 100%
+.link-info
+	display: block
+	+light
+	font-size: 15px
+	color: #fff
+	padding: 11px 50px 10px 20px  
+	position: relative
+	background-color: #191919
+	+border-radius(4px)
+	text-align: left
+	&:before
+		content: "" 
+		position: absolute
+		top: 50%
+		right: 20px
+		+svg(arr-right, 18, 18)
+		margin-top: -9px
+		
+.footer
+	background-color: #1A1A1A
+	color: #fff
+	padding: 37px 0 46px
+	overflow: hidden
+	+r3
+		text-align: center
+	&__contacts
+		+clr
+		margin: 0 -30px 20px 
+	&__contact
+		float: left
+		padding: 0 30px
+		+r2
+			width: 100%
+			+box
+			text-align: center
+		p
+			+light
+			font-size: 12px
+			color: #fff
+		span
+			padding: 9px 0 9px 20px
+			position: relative
+			display: inline-block
+			color: #E5097F
+			+bold
+			font-size: 14px
+			&:before
+				position: absolute
+				top: 50%
+				left: 0
+				+svg(phone, 12, 12)
+				content: ""
+				margin-top: -6px
+	&__info
+		+clr
+		float: left
+		+r3
+			float: none
+			display: inline-block
+			vertical-align: top
+		div
+			overflow: hidden
+		span
+			display: block
+			+light
+			font-size: 16px
+			padding: 10px 0 10px 28px
+			position: relative
+			&:before
+				position: absolute
+				top: 50%
+				left: 0
+				content: "" 
+			&.is-phone
+				&:before
+					+svg(phone, 12, 12)
+					margin-top: -6px
+			&.is-mail
+				&:before
+					+svg(mail, 14, 9)
+					margin-top: -4px
+	&__logo
+		float: left
+		margin-right: 28px
+		+r2
+			margin-right: 10px
+	&__menu
+		float: right
+		text-align: right
+		padding: 6px 0 
+		+r3
+			float: none
+		p
+			font-size: 13px
+			+light
+			padding: 5px 0 
+			+r3
+				text-align: center
+	&__nav
+		text-align: right
+		font-size: 0
+		margin-bottom: 16px
+		+r3
+			text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 6px 0 5px 34px
+			position: relative
+			+r2
+				padding: 6px 0 5px 15px 
+			+r3
+				padding: 10px  
+			&:before
+				position: absolute
+				top: 0
+				left: 10px
+				content: ""
+				+svg(f-stick, 16, 27)
+				+r2
+					display: none
+			a
+				+bold
+				color: #fff
+				text-transform: uppercase
+				font-size: 13px
+				+r2
+					font-size: 12px
+				&:hover
+					text-decoration: underline
+	&__card
+		float: left
+		font-size: 0
+		+r2
+			margin-left: 15px
+		+r3
+			float: none
+			margin: 0 0 10px
+			display: inline-block
